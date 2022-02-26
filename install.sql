@@ -1,0 +1,1 @@
+ALTER TABLE orders ADD carrier ENUM( 'nein', 'ja') NOT NULL DEFAULT 'nein';

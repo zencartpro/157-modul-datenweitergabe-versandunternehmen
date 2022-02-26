@@ -1,0 +1,90 @@
+===== Einwilligung in Datenweitergabe an Versandunternehmen 1.3.0 fuer Zen Cart 1.5.7 deutsch ===
+
+Die IT Recht Kanzlei schreibt für die Weitergabe der Emailadresse des Kunden an ein Versandunternehmen folgendes vor:
+Sie dürfen die vom Kunden erhobene E-Mail-Adresse nur dann an einen Dritten (hier DHL) weitergeben, wenn Sie die ausdrückliche Einwilligung des betroffenen Kunden in die Weitergabe seiner E-Mail-Adresse eingeholt haben!
+Diese Einwilligung des Kunden kann durch einen entsprechenden Erklärungstext bewerkstelligt werden, den der Kunde im Verlauf des Bestellprozesses in Ihrem Online-Shop durch Setzen eines Häkchens mittels Opt-In Checkbox ausdrücklich bestätigt.
+Bitte fügen Sie daher im Bestellvorgang folgenden Einwilligungstext (inkl. Check- Box) ein:
+„Ich bin damit einverstanden, dass meine E-Mail-Adresse an DHL (Deutsche Post AG, Charles-de-Gaulle-Straße 20, 53113 Bonn) weitergegeben wird, damit DHL vor der Zustellung der Ware zum Zwecke der Abstimmung eines Liefertermins per E-Mail Kontakt mit mir aufnehmen kann. Meine diesbezüglich erteilte Einwilligung kann ich jederzeit widerrufen, kontaktieren Sie uns hierzu unter den im Impressum enthaltenen Kontaktdaten.“
+Bitte beachten Sie, dass die Check-Box nicht vorangecheckt sein darf! Grund: Der Kunde muss seine Einwilligung in die Weitergabe seiner E-Mail-Adresse freiwillig und selbstständig erteilen!
+
+Dieses Modul integriert diese Einwilligungscheckbox auf der checkout_payment Seite.
+Ob der Kunde der Datenweitergabe zugestimmt hat, wird bei der jeweiligen Bestellung in der Administration angezeigt.
+
+
+Changelog:
+
+1.3.0
+2022-02-26
+Anpassungen für 1.5.7
+
+1.2.2
+2021-06-21
+mitgelieferte geänderte Sprachdateien auf den Stand von 1.5.6f gebracht
+
+1.2.1
+2020-08-14
+Fix in includes/classes/order.php für MySQL Strict Mode
+
+1.2.0
+2020-07-28
+Fixes und Codeänderungen aus 1.5.6e integriert
+
+1.1.2
+2019-11-08
+Fixes aus 1.5.6d integriert
+Datenweitergabeabfrage bei Versandart Selbstabholung deaktiviert
+
+1.1.1
+2019-10-09
+Fix für Datenweitergabeabfrage auch bei kostenlosem Versand
+
+1.1.0
+2019-07-04
+Anpassungen für Zen Cart 1.5.6
+Anzeige deaktiviert bei Downloadartikeln ohne Lieferung
+
+1.0.2
+2018-06-25
+Anpassungen für Zen Cart 1.5.5f
+
+1.0.1
+Radiobuttons statt Checkboxen bei der Einwilligung
+
+
+================= WICHTIG =====================
+Vor dem Einbau dieser Änderungen:
+BACKUP von Shop und Datenbank machen! 
+Keine Haftung, Verwendung auf eigene Gefahr!
+BACKUP gemacht? Ok, dann weiterlesen...
+=================================================
+
+
+===== INSTALLATION ===
+
+
+1)
+Die install.sql mit einem Texteditor öffnen und den Inhalt kopieren
+Dann ins Eingabefeld unter Tools > SQL Patches installieren einfügen und absenden.
+Dadurch wird die Tabelle orders mit dem neuen Feld carrier erweitert
+
+2)
+Im Ordner GEAENDERTE DATEIEN den Ordner DEINADMIN auf den Namen Ihres Adminverzeichnisses umbenennen.
+Alle Ordner namens DEINTEMPLATE auf den Namen des im Shop aktiven Templates umbenennen.
+Im Ordner GEAENDERTE DATEIEN dieses Downloads befinden die für dieses Modul notwendigen geänderten Originaldateien.
+Es wird dringend empfohlen, die bestehenden Orginaldateien nicht einfach zu überschreiben!
+Machen Sie das nur, wenn Sie Zen Cart 1.5.7 gerade neu installiert haben und noch keine Änderungen an Originaldateien vorgenommen haben.
+Stattdessen vergleichen Sie Ihre entsprechenden Originaldateien mit einem geeigneten Programm wie z.B. WinMerge oder Beyond Compare und nehmen die Änderungen manuell vor.
+
+Der Text, der auf der checkout_payment Seite erscheint, kann nach Belieben auf das jeweils passende Versandunternehmen abgewandelt werden in der includes/languages/german/DEINTEMPLATE/checkout_payment.php
+Sollte im Shop auch die englische Sprach verwendet werden die includes/languages/english/DEINTEMPLATE/checkout_payment.php entsprechend anpassen.
+
+
+
+===== DEINSTALLATION ===
+
+1)
+Alle von diesem Modul geänderten Dateien wieder mit den Originaldatein aus Ihrem zuvor angelegten Backup ersetzen
+
+2)
+Die uninstall.sql im Ordner UNINSTALL mit einem Texteditor öffnen und den Inhalt kopieren
+Dann ins Eingabefeld unter Tools > SQL Patches installieren einfügen und absenden.
