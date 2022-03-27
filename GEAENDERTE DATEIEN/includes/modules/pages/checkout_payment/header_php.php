@@ -7,7 +7,7 @@
  * Zen Cart German Version - www.zen-cart-pro.at
  * @copyright Portions Copyright 2003 osCommerce
  * @license https://www.zen-cart-pro.at/license/3_0.txt GNU General Public License V3.0
- * @version $Id: header_php.php for Datenweitergabe an Versandunternehmen 2022-02-26 15:38:16Z webchills $
+ * @version $Id: header_php.php for Datenweitergabe an Versandunternehmen 2022-03-27 16:05:16Z webchills $
  */
 
 // This should be first line of the script:
@@ -104,15 +104,13 @@ $carrier ='';
 //  $_SESSION['comments'] = '';
 $comments = !empty($_SESSION['comments']) ? $_SESSION['comments'] : '';
 
-if (isset($_SESSION['carrier'])) {
-    $carrier = $_SESSION['carrier'];
-  }
-
 if (isset ($_POST['carrier']) && zen_not_null($_POST['carrier'])) {
 $_SESSION['carrier'] = zen_db_prepare_input($_POST['carrier']);
 }
 
-$carrier = $_SESSION['carrier'];
+if (isset($_SESSION['carrier'])) {
+    $carrier = $_SESSION['carrier'];
+  }
 $total_weight = $_SESSION['cart']->show_weight();
 $total_count = $_SESSION['cart']->count_contents();
 
