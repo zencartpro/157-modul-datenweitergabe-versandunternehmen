@@ -6,7 +6,7 @@
  * @copyright Portions Copyright 2003 osCommerce
  * @license https://www.zen-cart-pro.at/license/3_0.txt GNU General Public License V3.0
  
- * @version $Id: checkout_payment.php for Datenweitergabe 2022-02-26 08:35:14Z webchills $
+ * @version $Id: checkout_payment.php for Datenweitergabe 2022-10-08 18:09:14Z webchills $
  */
 
 define('NAVBAR_TITLE_1', 'Bestellung - Schritt 2');
@@ -23,7 +23,7 @@ define('TEXT_SELECT_PAYMENT_METHOD', 'Bitte wählen Sie eine Zahlungsart für di
 define('TITLE_PLEASE_SELECT', 'Bitte wählen Sie');
 define('TABLE_HEADING_COMMENTS', 'Anmerkungen oder Hinweise');
 
-define('TEXT_NO_PAYMENT_OPTIONS_AVAILABLE','<span class="alert">Entschuldigung, aber wir können Zahlungen aus Ihrer Region nicht annehmen .</span><br />Bitte setzen Sie sich mit uns in Verbindung, um Alternativen zu suchen. ');
+define('TEXT_NO_PAYMENT_OPTIONS_AVAILABLE','<span class="alert">Entschuldigung, aber wir können Zahlungen aus Ihrer Region nicht annehmen .</span><br>Bitte setzen Sie sich mit uns in Verbindung, um Alternativen zu suchen. ');
 
 define('TITLE_CONTINUE_CHECKOUT_PROCEDURE', '<strong>Weiter zu Schritt 3</strong>');
 define('TEXT_CONTINUE_CHECKOUT_PROCEDURE', '- um Ihre Bestellung fortzuführen ...');

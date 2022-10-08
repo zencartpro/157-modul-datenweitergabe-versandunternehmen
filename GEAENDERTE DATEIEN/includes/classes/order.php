@@ -4,7 +4,7 @@
  * @copyright Copyright 2003-2022 Zen Cart Development Team
  * Zen Cart German Version - www.zen-cart-pro.at
  * @license https://www.zen-cart-pro.at/license/3_0.txt GNU General Public License V3.0
- * @version $Id: order.php for Datenweitergabe an Versandunternehmen 2022-02-26 08:08:25Z webchills $
+ * @version $Id: order.php for Datenweitergabe an Versandunternehmen 2022-10-08 18:03:25Z webchills $
  */
 /**
  * order class
@@ -1156,7 +1156,7 @@ class order extends base {
 
     $storepickup = (strpos($this->info['shipping_module_code'], "storepickup") !== false); 
     if ($this->content_type != 'virtual' && !$storepickup) {
-      $html_msg['ADDRESS_DELIVERY_DETAIL']    = zen_address_label($_SESSION['customer_id'], $_SESSION['sendto'], true, '', "<br />");
+      $html_msg['ADDRESS_DELIVERY_DETAIL']    = zen_address_label($_SESSION['customer_id'], $_SESSION['sendto'], true, '', "<br>");
     } else {
        $html_msg['ADDRESS_DELIVERY_DETAIL']    = 'n/a'; 
     }
@@ -1175,7 +1175,7 @@ class order extends base {
     EMAIL_SEPARATOR . "\n" .
     zen_address_label($_SESSION['customer_id'], $_SESSION['billto'], false, '', "\n") . "\n\n";
     $html_msg['ADDRESS_BILLING_TITLE']   = EMAIL_TEXT_BILLING_ADDRESS;
-    $html_msg['ADDRESS_BILLING_DETAIL']  = zen_address_label($_SESSION['customer_id'], $_SESSION['billto'], true, '', "<br />");
+    $html_msg['ADDRESS_BILLING_DETAIL']  = zen_address_label($_SESSION['customer_id'], $_SESSION['billto'], true, '', "<br>");
 
     if (is_object($GLOBALS[$_SESSION['payment']])) {
       $cc_num_display = (isset($this->info['cc_number']) && $this->info['cc_number'] != '') ? /*substr($this->info['cc_number'], 0, 4) . */ str_repeat('X', (strlen($this->info['cc_number']) - 8)) . substr($this->info['cc_number'], -4) . "\n\n" : '';
@@ -1266,7 +1266,7 @@ class order extends base {
       $html_msg['EMAIL_TEXT_HEADER'] = nl2br($this->extra_header_text) . $html_msg['EMAIL_TEXT_HEADER'];
       // BOF pdf Rechnung
       if(RL_INVOICE3_STATUS=='true'){
-      if(method_exists($pdfT, "getPDFAttachments")){
+      if (! empty($pdfT) && method_exists($pdfT, "getPDFAttachments")){
         $this->attachArray = $pdfT->getPDFAttachments('NO');
       }
     }
