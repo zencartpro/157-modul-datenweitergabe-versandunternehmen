@@ -6,7 +6,7 @@
  * Zen Cart German Version - www.zen-cart-pro.at
  * @copyright Portions Copyright 2003 osCommerce
  * @license https://www.zen-cart-pro.at/license/3_0.txt GNU General Public License V3.0
- * @version $Id: german.php for Datenweitergabe an Versandunternehmen 2022-10-08 18:08:57Z webchills $
+ * @version $Id: german.php for Datenweitergabe an Versandunternehmen 2022-12-17 14:08:57Z webchills $
  */
 
 // FOLLOWING WERE moved to meta_tags.php
@@ -286,7 +286,7 @@ define('ARIA_PAGINATION_ROLE_LABEL_GENERAL','Seitenumbruch');
 define('ARIA_PAGINATION_ROLE_LABEL_FOR','%s Seitenumbruch'); // eg: "Search results Pagination"
 define('ARIA_PAGINATION_PREVIOUS_PAGE','Gehe zur vorherigen Seite');
 define('ARIA_PAGINATION_NEXT_PAGE','Gehe zur nächsten Seite');
-define('ARIA_PAGINATION_CURRENT_PAGE','Aktuelle Seitee');
+define('ARIA_PAGINATION_CURRENT_PAGE','Aktuelle Seite');
 define('ARIA_PAGINATION_CURRENTLY_ON',', jetzt auf Seite %s');
 define('ARIA_PAGINATION_GOTO','Gehe zu ');
 define('ARIA_PAGINATION_PAGE_NUM','Seite %s');
@@ -297,6 +297,7 @@ define('ARIA_PAGINATION_','');
 define('TEXT_BASE_PRICE', 'ab ');
 
 define('TEXT_CLICK_TO_ENLARGE', 'größeres Bild');
+define('TEXT_CLOSE_WINDOW_IMAGE', 'Bild zum Schließen anclicken');
 
 define('TEXT_SORT_PRODUCTS', 'Artikel sortieren ');
 define('TEXT_DESCENDINGLY', 'aufsteigend');
@@ -501,7 +502,7 @@ define('CAPTION_UPCOMING_PRODUCTS','Diese Artikel sind in Kürze lieferbar');
 
 // meta tags special defines
 define('META_TAG_PRODUCTS_PRICE_IS_FREE_TEXT','Kostenlos!');
-  define('ASK_A_QUESTION', 'Ask a question about this item');
+define('ASK_A_QUESTION', 'Frage zum Artikel stellen');
 
 // customer login
 define('TEXT_SHOWCASE_ONLY', 'Kontakt');
