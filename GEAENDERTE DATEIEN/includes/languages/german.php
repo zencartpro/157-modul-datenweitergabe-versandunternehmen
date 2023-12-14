@@ -6,16 +6,17 @@
 * Zen Cart German Version - www.zen-cart-pro.at
 * @copyright Portions Copyright 2003 osCommerce
 * @license https://www.zen-cart-pro.at/license/3_0.txt GNU General Public License V3.0
- * @version $Id: german.php for Datenweitergabe an Versandunternehmen 2023-11-17 15:05:57Z webchills $
+* @version $Id: german.php for Datenweitergabe an Versandunternehmen 2023-12-14 10:05:57Z webchills $
  */
 // -----
 // Since the languages are now loaded via classes, the $locales definition
 // needs to be globalized for use in payment-methods (e.g. paypalwpp) and
 // other processing.
-//
+// do NOT change or remove the following 3 lines
 global $locales;
 $locales = ['de_DE.UTF-8', 'de_AT.UTF-8', 'de_CH.UTF-8', 'de_DE.ISO_8859-1','de_DE@euro', 'de_DE', 'de', 'ge', 'deu.deu'];
 @setlocale(LC_TIME, $locales);
+//
 define('ARIA_DELETE_ITEM_FROM_CART','Artikel aus dem Warenkorn löschen');
 define('ARIA_EDIT_QTY_IN_CART','Menge im Warenkorb ändern');
 define('ARIA_PAGINATION_','');
@@ -129,7 +130,7 @@ define('ENTRY_EMAIL_ADDRESS_CHECK_ERROR', 'Ihre E-Mail Adresse scheint nicht kor
 define('ENTRY_EMAIL_ADDRESS_CONFIRM', 'E-Mail bestätigen:'); 
 define('ENTRY_EMAIL_ADDRESS_CONFIRM_NOT_MATCHING', 'Die angegebenen Emailadressen stimmen nicht überein.'); 
 define('ENTRY_EMAIL_ADDRESS_ERROR','Ist Ihre E-Mail-Adresse korrekt? Sie sollte mindestens ' . ENTRY_EMAIL_ADDRESS_MIN_LENGTH . ' Zeichen enthalten. Bitte versuchen Sie es erneut.');
-define('ENTRY_EMAIL_ADDRESS_ERROR_EXISTS','Unser System hat bereits einen Datensatz für diese E-Mail-Adresse - bitte versuchen Sie, sich mit dieser E-Mail-Adresse anzumelden. Wenn Sie diese Adresse nicht mehr verwenden, können Sie sie im Bereich Mein Konto korrigieren.');
+define('ENTRY_EMAIL_ADDRESS_ERROR_EXISTS', 'Ihre E-Mail Adresse ist bereits registriert. Bitte melden Sie sich an oder registrieren Sie sich mit einer anderen E-Mail Adresse.');
 define('ENTRY_EMAIL_ADDRESS_TEXT','*');
 define('ENTRY_EMAIL_CONTENT_CHECK_ERROR','Haben Sie Ihre Nachricht vergessen? Wir würden gerne von Ihnen hören. Sie können Ihre Kommentare in das Textfeld unten eingeben.');
 define('ENTRY_EMAIL_HTML_DISPLAY','HTML');
@@ -189,10 +190,10 @@ define('ENTRY_TELEPHONE_NUMBER_ERROR','Ihre Telefonnummer muss mindestens ' . EN
 define('ENTRY_TELEPHONE_NUMBER_TEXT','*');
 define('ERROR_AT_LEAST_ONE_INPUT','Mindestens eines der Felder im Suchformular muss eingegeben werden.');
 define('ERROR_CART_UPDATE','<strong>Bitte aktualisieren Sie Ihre Bestellung.</strong> ');
-define('ERROR_CONDITIONS_NOT_ACCEPTED','Bitte bestätigen Sie, dass Sie die an diese Bestellung gebundenen Bedingungen gelesen haben und damit einverstanden sind, indem Sie das Kästchen ankreuzen.');
+define('ERROR_CONDITIONS_NOT_ACCEPTED', 'Bitte bestätigen Sie unsere AGB!');
 define('ERROR_CORRECTIONS_HEADING','Bitte korrigieren Sie die folgenden Angaben: <br>');
 define('ERROR_CUSTOMERS_ID_INVALID', 'Die Kundeninformation konnte nicht verifiziert werden!<br>Bitte melden Sie sich an oder erstellen Sie Ihr Kundenkonto erneut ...');
-define('ERROR_DATABASE_MAINTENANCE_NEEDED','<a href="https://docs.zen-cart.com/user/troubleshooting/error_71_maintenance_required/" rel="noopener" target="_blank">ERROR 0071 Es scheint ein Problem mit der Datenbank zu geben. Eine Wartung ist erforderlich.</a>');
+define('ERROR_DATABASE_MAINTENANCE_NEEDED','<a href="https://www.zen-cart-pro.at/themen/logfiles-und-troubleshooting/" rel="noopener" target="_blank">FEHLER 0071: Es scheint ein Problem mit der Datenbank zu geben. Ausführung von Datenbankwartungsfunktionen ist erforderlich.</a>');
 define('ERROR_DESTINATION_DOES_NOT_EXIST','Fehler: Ziel existiert nicht.');
 define('ERROR_DESTINATION_NOT_WRITEABLE','Fehler: Ziel ist nicht beschreibbar.');
 define('ERROR_FILETYPE_NOT_ALLOWED','Fehler: Dateityp nicht erlaubt.');
@@ -402,7 +403,7 @@ define('TEXT_CCVAL_ERROR_UNKNOWN_CARD','Die Kreditkartennummer, die mit %s begin
 define('TEXT_CHARGES_LETTERS', 'Kalkulierte Gebühr:');
 define('TEXT_CHARGES_WORD', 'Kalkulierte Gebühr:');
 define('TEXT_CLICK_TO_ENLARGE','größeres Bild');
-define('TEXT_CLOSE_WINDOW', ' - zum Schließen ins Bild klicken');
+define('TEXT_CLOSE_WINDOW_IMAGE', ' - zum Schließen ins Bild klicken');
 define('TEXT_COUPON_GV_RESTRICTION_ZONES','Es gelten Einschränkungen für die Rechnungsadresse.');
 define('TEXT_COUPON_HELP_DATE','Der Coupon ist gültig zwischen %s und %s');
 define('TEXT_COUPON_HELP_HEADER','Der von Ihnen eingegebene Rabattcoupon-Einlösecode ist für ');
