@@ -2,11 +2,11 @@
 /**
 * Zen Cart German Specific (158 code in 157 / zencartpro adaptations)
 * 
-* @copyright Copyright 2003-2023 Zen Cart Development Team
+* @copyright Copyright 2003-2024 Zen Cart Development Team
 * Zen Cart German Version - www.zen-cart-pro.at
 * @copyright Portions Copyright 2003 osCommerce
 * @license https://www.zen-cart-pro.at/license/3_0.txt GNU General Public License V3.0
-* @version $Id: german.php for Datenweitergabe an Versandunternehmen 2023-12-14 10:05:57Z webchills $
+* @version $Id: german.php for Datenweitergabe an Versandunternehmen 2024-02-18 12:05:57Z webchills $
  */
 // -----
 // Since the languages are now loaded via classes, the $locales definition
@@ -17,7 +17,7 @@ global $locales;
 $locales = ['de_DE.UTF-8', 'de_AT.UTF-8', 'de_CH.UTF-8', 'de_DE.ISO_8859-1','de_DE@euro', 'de_DE', 'de', 'ge', 'deu.deu'];
 @setlocale(LC_TIME, $locales);
 //
-define('ARIA_DELETE_ITEM_FROM_CART','Artikel aus dem Warenkorn löschen');
+define('ARIA_DELETE_ITEM_FROM_CART','Artikel aus dem Warenkorb löschen');
 define('ARIA_EDIT_QTY_IN_CART','Menge im Warenkorb ändern');
 define('ARIA_PAGINATION_','');
 define('ARIA_PAGINATION_CURRENTLY_ON','); jetzt auf Seite %s');
@@ -86,7 +86,7 @@ define('CART_ITEMS','im Warenkorb: ');
 define('CART_QUANTITY_SUFFIX','&nbsp;x ');
 define('CART_SHIPPING_METHOD_ADDRESS','Adresse:');
 define('CART_SHIPPING_METHOD_ALL_DOWNLOADS','- Downloads');
-define('CART_SHIPPING_METHOD_FREE_TEXT','Versankostenfrei');
+define('CART_SHIPPING_METHOD_FREE_TEXT','Versandkostenfrei');
 define('CART_SHIPPING_METHOD_RATES','Kosten');
 define('CART_SHIPPING_METHOD_TEXT','Verfügbare Versandarten');
 define('CART_SHIPPING_METHOD_TO','Versand an: ');
@@ -329,7 +329,7 @@ define('PRODUCTS_PRICE_IS_CALL_FOR_PRICE_TEXT','Nach Preis fragen');
 define('PRODUCTS_PRICE_IS_FREE_TEXT','Es ist kostenlos!');
 define('PRODUCTS_QUANTITY_MAX_TEXT_LISTING','Max:');
 define('PRODUCTS_QUANTITY_MIN_TEXT_LISTING','Min: ');
-define('PRODUCTS_QUANTITY_UNIT_TEXT_LISTING','Einheiten: ');
+define('PRODUCTS_QUANTITY_UNIT_TEXT_LISTING','Stück: ');
 define('PRODUCT_PRICE_DISCOUNT_AMOUNT', ' weniger');
 define('PRODUCT_PRICE_DISCOUNT_PERCENTAGE', '% !');
 define('PRODUCT_PRICE_DISCOUNT_PREFIX', 'Sie sparen ');
@@ -442,7 +442,7 @@ define('TEXT_HEADER_DISCOUNTS_OFF', 'Keine Rabatte möglich ...');
 define('TEXT_HEADER_DISCOUNT_PRICES_ACTUAL_PRICE', 'Preis abzüglich Mengenrabatt');
 define('TEXT_HEADER_DISCOUNT_PRICES_AMOUNT_OFF', 'Abzug für Mengenrabatt');
 define('TEXT_HEADER_DISCOUNT_PRICES_PERCENTAGE', 'Abzug für Mengenrabatt');
-define('TEXT_INFO_SORT_BY', 'Sortiert nach: ');
+define('TEXT_INFO_SORT_BY', 'Sortiere nach:');
 define('TEXT_INFO_SORT_BY_PRODUCTS_DATE', 'Erstelldatum - absteigend');
 define('TEXT_INFO_SORT_BY_PRODUCTS_DATE_DESC', 'Erstelldatum - aufsteigend');
 define('TEXT_INFO_SORT_BY_PRODUCTS_NAME', 'Artikelname');
@@ -508,7 +508,7 @@ define('TEXT_PRODUCT_MODEL','Artikelnummer: ');
 define('TEXT_PRODUCT_NEW_LISTING_MULTIPLE_ADD_TO_CART','Hinzufügen: ');
 define('TEXT_PRODUCT_NOT_FOUND','Der Artikel wurde leider nicht gefunden.');
 define('TEXT_PRODUCT_OPTIONS','Bitte wählen Sie: ');
-define('TEXT_PRODUCT_QUANTITY','Einheiten auf Lager');
+define('TEXT_PRODUCT_QUANTITY',' Stück auf Lager');
 define('TEXT_PRODUCT_WEIGHT','Versandgewicht: ');
 define('TEXT_PRODUCT_WEIGHT_UNIT',' kg');
 define('TEXT_REMOVE_REDEEM_COUPON_ZONE', 'Der Gutscheincode "%s" ist für die ausgewählte Adresse nicht gültig.');
