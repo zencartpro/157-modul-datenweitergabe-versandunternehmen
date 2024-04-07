@@ -1,4 +1,4 @@
-===== Einwilligung in Datenweitergabe an Versandunternehmen 1.4.0 fuer Zen Cart 1.5.7g deutsch ===
+===== Einwilligung in Datenweitergabe an Versandunternehmen 1.5.0 fuer Zen Cart 1.5.7g deutsch ===
 
 Die IT Recht Kanzlei schreibt für die Weitergabe der Emailadresse des Kunden an ein Versandunternehmen folgendes vor:
 Sie dürfen die vom Kunden erhobene E-Mail-Adresse nur dann an einen Dritten (hier DHL) weitergeben, wenn Sie die ausdrückliche Einwilligung des betroffenen Kunden in die Weitergabe seiner E-Mail-Adresse eingeholt haben!
@@ -12,6 +12,10 @@ Ob der Kunde der Datenweitergabe zugestimmt hat, wird bei der jeweiligen Bestell
 
 
 Changelog:
+
+1.5.0
+2024-04-07
+Anpassungen für 1.5.7h
 
 1.4.0
 2023-11-17
@@ -88,7 +92,7 @@ Im Ordner GEAENDERTE DATEIEN den Ordner DEINADMIN auf den Namen Ihres Adminverze
 Alle Ordner namens DEINTEMPLATE auf den Namen des im Shop aktiven Templates umbenennen.
 Im Ordner GEAENDERTE DATEIEN dieses Downloads befinden die für dieses Modul notwendigen geänderten Originaldateien.
 Es wird dringend empfohlen, die bestehenden Orginaldateien nicht einfach zu überschreiben!
-Machen Sie das nur, wenn Sie Zen Cart 1.5.7g gerade neu installiert haben und noch keine Änderungen an Originaldateien vorgenommen haben.
+Machen Sie das nur, wenn Sie Zen Cart 1.5.7h gerade neu installiert haben und noch keine Änderungen an Originaldateien vorgenommen haben.
 Stattdessen vergleichen Sie Ihre entsprechenden Originaldateien mit einem geeigneten Programm wie z.B. WinMerge oder Beyond Compare und nehmen die Änderungen manuell vor.
 
 Der Text, der auf der checkout_payment Seite erscheint, kann nach Belieben auf das jeweils passende Versandunternehmen abgewandelt werden in der includes/languages/german/DEINTEMPLATE/checkout_payment.php
