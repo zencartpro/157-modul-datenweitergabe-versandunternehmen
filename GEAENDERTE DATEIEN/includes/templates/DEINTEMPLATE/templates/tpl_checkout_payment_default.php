@@ -1,15 +1,15 @@
 <?php
 /**
  * Page Template
- * Zen Cart German Specific (158 code in 157 /zencartpro adaptations)
+ * Zen Cart German Specific (210 code in 157 /zencartpro adaptations)
  * Loaded automatically by index.php?main_page=checkout_payment.
  * Displays the allowed payment modules, for selection by customer.
  * 
- * @copyright Copyright 2003-2023 Zen Cart Development Team
+ * @copyright Copyright 2003-2026 Zen Cart Development Team
  * Zen Cart German Version - www.zen-cart-pro.at
  * @copyright Portions Copyright 2003 osCommerce
  * @license https://www.zen-cart-pro.at/license/3_0.txt GNU General Public License V3.0
- * @version $Id: tpl_checkout_payment_default.php for Datenweitergabe an Transportunternehmen 2023-11-17 15:01:42Z webchills $
+ * @version $Id: tpl_checkout_payment_default.php for Datenweitergabe an Transportunternehmen 2026-04-07 13:01:42Z webchills $
  */
 ?>
 <?php echo $payment_modules->javascript_validation(); ?>
@@ -68,11 +68,11 @@
       for ($j=0, $n2=(isset($selection[$i]['fields']) ? sizeof($selection[$i]['fields']) : 0); $j<$n2; $j++) {
 ?>
 <fieldset>
-<legend><?php echo $selection[$i]['module']; ?></legend>
-<?php echo $selection[$i]['redeem_instructions']; ?>
-<div class="gvBal larger"><?php echo (isset($selection[$i]['checkbox'])) ? $selection[$i]['checkbox'] : ''; ?></div>
-<label class="inputLabel"<?php echo ($selection[$i]['fields'][$j]['tag']) ? ' for="'.$selection[$i]['fields'][$j]['tag'].'"': ''; ?>><?php echo $selection[$i]['fields'][$j]['title']; ?></label>
-<?php echo $selection[$i]['fields'][$j]['field']; ?>
+                    <legend><?= $selection[$i]['module'] ?></legend>
+                    <?= $selection[$i]['redeem_instructions'] ?>
+                    <div class="gvBal larger"><?= $selection[$i]['checkbox'] ?? '' ?></div>
+                    <label class="inputLabel"<?= $selection[$i]['fields'][$j]['tag'] ? ' for="' . $selection[$i]['fields'][$j]['tag'] . '"' : '' ?>><?= $selection[$i]['fields'][$j]['title'] ?></label>
+                    <?= $selection[$i]['fields'][$j]['field'] ?>
 </fieldset>
 <?php
       }
@@ -140,7 +140,7 @@
 <label for="pmt-<?php echo $selection[$i]['id']; ?>" class="radioButtonLabel"><?php echo $selection[$i]['module']; ?></label>
 
 <?php
-    if (defined('MODULE_ORDER_TOTAL_COD_STATUS') && MODULE_ORDER_TOTAL_COD_STATUS == 'true' and $selection[$i]['id'] == 'cod') {
+    if (defined('MODULE_ORDER_TOTAL_COD_STATUS') && MODULE_ORDER_TOTAL_COD_STATUS == 'true' && $selection[$i]['id'] == 'cod') {
 ?>
 <div class="alert"><?php echo TEXT_INFO_COD_FEES; ?></div>
 <?php
@@ -166,26 +166,27 @@
 <?php	} else {	?>
 		<div class="ccinfo">
 <?php } ?>
-<?php
-      for ($j=0, $n2=sizeof($selection[$i]['fields']); $j<$n2; $j++) {
-?>
-<label <?php echo (isset($selection[$i]['fields'][$j]['tag']) ? 'for="'.$selection[$i]['fields'][$j]['tag'] . '" ' : ''); ?>class="inputLabelPayment"><?php echo $selection[$i]['fields'][$j]['title']??''; ?></label><?php echo $selection[$i]['fields'][$j]['field']; ?>
-<br class="clearBoth">
-<?php
-      }
-?>
-</div>
-<br class="clearBoth">
-<?php
-    }
-    $radio_buttons++;
-?>
-<br class="clearBoth">
-<?php
-  }
-?>
+                        <?php
+                        for ($j = 0, $n2 = sizeof($selection[$i]['fields']); $j < $n2; $j++) {
+                            ?>
+                            <label<?= isset($selection[$i]['fields'][$j]['tag']) ? ' for="' . $selection[$i]['fields'][$j]['tag'] . '"' : '' ?> class="inputLabelPayment"><?= $selection[$i]['fields'][$j]['title'] ?></label>
+                            <?= $selection[$i]['fields'][$j]['field'] ??'' ?>
+                            <br class="clearBoth">
+                            <?php
+                        }
+                        ?>
+                    </div>
+                    <br class="clearBoth">
+                    <?php
+                }
+                $radio_buttons++;
+                ?>
+                <br class="clearBoth">
+                <?php
+            }
+            ?>
 
-</fieldset>
+        </fieldset>
 <?php // ** BEGIN PAYPAL EXPRESS CHECKOUT **
       } else {
         ?><input type="hidden" name="payment" value="<?php echo $_SESSION['payment']; ?>"><?php
@@ -207,7 +208,7 @@
 <?php	} else { ?>
 <?php echo  zen_draw_checkbox_field('conditions', '1', false, 'id="conditions"');?>
 <?php
-  }
+}
 ?>
 <label class="checkboxLabel" for="conditions"><?php echo TEXT_CONDITIONS_CONFIRM; ?></label>
 </fieldset>
@@ -229,6 +230,7 @@
   }
 ?>
 <div class="buttonRow forward" id="paymentSubmit"><?php echo zen_image_submit(BUTTON_IMAGE_CONTINUE_CHECKOUT, BUTTON_CONTINUE_ALT, 'onclick="submitFunction('.zen_user_has_gv_account($_SESSION['customer_id']).','.$order->info['total'].')"'); ?></div>
+
 <div class="buttonRow back"><?php echo '<strong>' . TITLE_CONTINUE_CHECKOUT_PROCEDURE . '</strong>' . '<br>' . TEXT_CONTINUE_CHECKOUT_PROCEDURE; ?></div>
 
 </form>
